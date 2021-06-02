@@ -8,4 +8,5 @@ import com.javainuse.model.User;
 public interface UserIO extends CrudRepository<User, Integer> {
 
 	User findByEmail(String email);
+
 }

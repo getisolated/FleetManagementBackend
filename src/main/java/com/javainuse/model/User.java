@@ -1,5 +1,7 @@
 package com.javainuse.model;
 
+import com.javainuse.frontModel.User.UserModel;
+
 import javax.persistence.*;
 
 @Entity
@@ -93,6 +95,49 @@ public class User {
 		this.email = email;
 	}
 
+
+
+	public User(UserModel user, String password) {
+		this.id = user.getId();
+		this.username = user.getUsername();
+		this.fullname = user.getFullname();
+		this.password = password;
+		this.email = user.getEmail();
+		this.pic = user.getPic();
+		this.occupation = user.getOccupation();
+		this.companyName = user.getCompanyName();
+		this.phone = user.getPhone();
+		this.address_addressLine = user.getAddress().getAdressLine();
+		this.address_city = user.getAddress().getCity();
+		this.address_postCode = user.getAddress().getPostCode();
+		this.address_state = user.getAddress().getState();
+		this.socialNetworks_facebook = user.getSocialNetworks().getFacebook();
+		this.socialNetworks_instagram = user.getSocialNetworks().getInstagram();
+		this.socialNetworks_twitter = user.getSocialNetworks().getTwitter();
+		this.socialNetworks_linkedIn = user.getSocialNetworks().getLinkedIn();
+		this.firstname = user.getFirstname();
+		this.lastname = user.getLastname();
+		this.language = user.getLanguage();
+		this.timeZone = user.getTimeZone();
+		this.website = user.getWebsite();
+		this.communication_email = user.getCommunication().getEmail();
+		this.communication_phone = user.getCommunication().getPhone();
+		this.communication_sms = user.getCommunication().getSms();
+		this.emailSettings_activityRelatesEmail_memberRegistration = user.getEmailSettings().getActivityRelatesEmail().getMemberRegistration();
+		this.emailSettings_activityRelatesEmail_newMembershipApproval = user.getEmailSettings().getActivityRelatesEmail().getNewMembershipApproval();
+		this.emailSettings_activityRelatesEmail_someoneAddsYouAsAsAConnection = user.getEmailSettings().getActivityRelatesEmail().getSomeoneAddsYouAsAsAConnection();
+		this.emailSettings_activityRelatesEmail_uponNewOrder = user.getEmailSettings().getActivityRelatesEmail().getUponNewOrder();
+		this.emailSettings_activityRelatesEmail_youAreSentADirectMessage = user.getEmailSettings().getActivityRelatesEmail().getYouAreSentADirectMessage();
+		this.emailSettings_activityRelatesEmail_youHaveNewNotifications = user.getEmailSettings().getActivityRelatesEmail().getYouHaveNewNotifications();
+		this.emailSettings_emailNotification = user.getEmailSettings().getEmailNotification();
+		this.emailSettings_sendCopyToPersonalEmail = user.getEmailSettings().getSendCopyToPersonalEmail();
+		this.newsAboutKeenthemesProductsAndFeatureUpdates = user.getEmailSettings().getUpdatesFromKeenthemes().getNewsAboutKeenthemesProductsAndFeatureUpdates();
+		this.newsAboutMetronicOnPartnerProductsAndOtherServices = user.getEmailSettings().getUpdatesFromKeenthemes().getNewsAboutMetronicOnPartnerProductsAndOtherServices();
+		this.tipsOnGettingMoreOutOfKeen = user.getEmailSettings().getUpdatesFromKeenthemes().getTipsOnGettingMoreOutOfKeen();
+		this.tipsOnMetronicBusinessProducts = user.getEmailSettings().getUpdatesFromKeenthemes().getTipsOnMetronicBusinessProducts();
+		this.thingsYouMissedSindeYouLastLoggedIntoKeen = user.getEmailSettings().getUpdatesFromKeenthemes().getThingsYouMissedSindeYouLastLoggedIntoKeen();
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -105,12 +150,10 @@ public class User {
 		this.username = username;
 	}
 
+	public String getPassword() { return password; }
+
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getPassword() {
-		return password;
 	}
 
 	public String getFullname() {

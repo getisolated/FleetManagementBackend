@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
-	
+
 	@Autowired
 	private UserIO userIO;
 
@@ -32,7 +32,6 @@ public class JwtUserDetailsService implements UserDetailsService {
 	}
 
 	public User save(User user) {
-		System.out.println("here");
 		User newUser = new User(bcryptEncoder.encode(user.getPassword()), user.getFullname(), user.getEmail());
 		System.out.println(newUser);
 		return userIO.save(newUser);

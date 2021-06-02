@@ -3,13 +3,13 @@ package com.javainuse.frontModel.User;
 public class EmailSettings {
 
     private Boolean emailNotification;
-    private Boolean sendCopyToPersonaleEmail;
+    private Boolean sendCopyToPersonalEmail;
     private ActivityRelatesEmail activityRelatesEmail;
     private UpdatesFromKeenthemes updatesFromKeenthemes;
 
     public EmailSettings(Boolean emailNotification, Boolean sendCopyToPersonaleEmail, ActivityRelatesEmail activityRelatesEmail, UpdatesFromKeenthemes updatesFromKeenthemes) {
         this.emailNotification = emailNotification;
-        this.sendCopyToPersonaleEmail = sendCopyToPersonaleEmail;
+        this.sendCopyToPersonalEmail = sendCopyToPersonaleEmail;
         this.activityRelatesEmail = activityRelatesEmail;
         this.updatesFromKeenthemes = updatesFromKeenthemes;
     }
@@ -22,12 +22,12 @@ public class EmailSettings {
         this.emailNotification = emailNotification;
     }
 
-    public Boolean getSendCopyToPersonaleEmail() {
-        return sendCopyToPersonaleEmail;
+    public Boolean getSendCopyToPersonalEmail() {
+        return sendCopyToPersonalEmail;
     }
 
-    public void setSendCopyToPersonaleEmail(Boolean sendCopyToPersonaleEmail) {
-        this.sendCopyToPersonaleEmail = sendCopyToPersonaleEmail;
+    public void setSendCopyToPersonalEmail(Boolean sendCopyToPersonaleEmail) {
+        this.sendCopyToPersonalEmail = sendCopyToPersonaleEmail;
     }
 
     public ActivityRelatesEmail getActivityRelatesEmail() {

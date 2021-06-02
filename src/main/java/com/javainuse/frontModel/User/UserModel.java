@@ -10,9 +10,13 @@ import java.util.List;
 
 public class UserModel {
 
+    private Integer id;
+
     private String username;
 
     private String fullname;
+
+    private String password;
 
     private String email;
 
@@ -44,9 +48,13 @@ public class UserModel {
 
     private EmailSettings emailSettings;
 
+    public UserModel() {}
+
     public UserModel(User user, List<UserHasRole> userHasRoles) {
+        this.id = user.getId();
         this.username = user.getUsername();
         this.fullname = user.getFullname();
+        this.password = user.getPassword();
         this.email = user.getEmail();
         this.pic = user.getPic();
         this.roles = new ArrayList<>();
@@ -85,6 +93,8 @@ public class UserModel {
                 updatesFromKeenthemes);
     }
 
+    public Integer getId() { return id; }
+
     public String getUsername() {
         return username;
     }
@@ -100,6 +110,10 @@ public class UserModel {
     public void setFullname(String fullname) {
         this.fullname = fullname;
     }
+
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
 
     public String getEmail() {
         return email;
